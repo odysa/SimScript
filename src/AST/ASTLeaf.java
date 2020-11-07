@@ -7,7 +7,7 @@ import java.util.Iterator;
 
 
 public class ASTLeaf extends ASTNode {
-    private Token token;
+    protected Token token;
 
     public ASTLeaf(Token token) {
         this.token = token;

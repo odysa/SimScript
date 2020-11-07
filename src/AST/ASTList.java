@@ -6,7 +6,7 @@ import java.util.Iterator;
 import java.util.List;
 
 public class ASTList extends ASTNode {
-    private List<ASTNode> nodes;
+    protected List<ASTNode> nodes;
 
     public ASTList(List list) {
         nodes = list;
