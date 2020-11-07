@@ -1,5 +1,7 @@
 package AST;
 
+import evaluator.Environment;
+import parser.StoneException;
 import parser.Token;
 
 import java.util.ArrayList;
@@ -20,6 +22,11 @@ public class ASTLeaf extends ASTNode {
     @Override
     public String toString() {
         return token.getText();
+    }
+
+    @Override
+    public Object eval(Environment env) {
+        throw new StoneException("cannot eval: " + toString(), this);
     }
 
 

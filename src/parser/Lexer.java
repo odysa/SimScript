@@ -78,6 +78,7 @@ public class Lexer {
                 start = matcher.end();
             } else throw new ParseException("bad token at line " + lineNumber);
         }
+        queue.add(new IdToken(lineNumber, Token.EOL));
     }
 
     protected void addToken(int lineNumber, Matcher matcher) {

@@ -24,20 +24,25 @@ public class CodeDialog extends Reader {
                 buffer = in + "\n";
                 pos = 0;
             }
+        } else {
+            return -1;
         }
 
         int size = 0;
         int length = buffer.length();
         while (pos < length && size < len)
             cbuf[off + size++] = buffer.charAt(pos++);
-        if (pos == length)
-            buffer = null;
+//        if (pos == length)
+//            buffer = null;
         return size;
     }
 
-    protected void print(String s) { System.out.println(s); }
+    protected void print(String s) {
+        System.out.println(s);
+    }
 
-    public void close() throws IOException {}
+    public void close() throws IOException {
+    }
 
     protected String showDialog() {
         JTextArea area = new JTextArea(20, 40);

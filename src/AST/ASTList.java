@@ -1,5 +1,7 @@
 package AST;
 
+import evaluator.Environment;
+import parser.StoneException;
 import parser.Token;
 
 import java.util.Iterator;
@@ -23,6 +25,11 @@ public class ASTList extends ASTNode {
             sep = " ";
         }
         return builder.append(')').toString();
+    }
+
+    @Override
+    public Object eval(Environment env) {
+        throw new StoneException("cannot eval: " + toString(), this);
     }
 
     @Override
