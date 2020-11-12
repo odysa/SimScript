@@ -18,4 +18,10 @@ public class BasicEnv implements Environment {
     public Object get(String name) {
         return env.get(name);
     }
+
+
+    @Override
+    public void setOuter(Environment e) {
+
+    }
 }

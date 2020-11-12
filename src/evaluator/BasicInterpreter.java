@@ -5,7 +5,7 @@ import AST.*;
 
 public class BasicInterpreter {
     public static void main(String[] args) throws ParseException {
-        run(new BasicParser(), new BasicEnv());
+        run(new ClosureParser(), new NestedEnv());
     }
 
     public static void run(BasicParser bp, Environment env)
