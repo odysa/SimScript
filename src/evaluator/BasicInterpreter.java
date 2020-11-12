@@ -5,7 +5,8 @@ import AST.*;
 
 public class BasicInterpreter {
     public static void main(String[] args) throws ParseException {
-        run(new ClosureParser(), new NestedEnv());
+        run(new ClosureParser(),
+                new Natives().environment(new NestedEnv()));
     }
 
     public static void run(BasicParser bp, Environment env)
@@ -14,7 +15,7 @@ public class BasicInterpreter {
         while (lexer.peek(0) != Token.EOF) {
             ASTNode t = bp.parse(lexer);
             if (!(t instanceof NullStmnt)) {
-                Object r =  t.eval(env);
+                Object r = t.eval(env);
                 System.out.println("=> " + r);
             }
         }
