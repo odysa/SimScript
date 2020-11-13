@@ -30,7 +30,7 @@ public class NestedEnv implements Environment {
         ((NestedEnv) place).addNew(name, value);
     }
 
-    private Environment where(String name) {
+    Environment where(String name) {
         if (env.get(name) != null) {
             return this;
         }

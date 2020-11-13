@@ -1,6 +1,7 @@
 package AST;
 
 import evaluator.Environment;
+import evaluator.Function;
 
 import java.util.List;
 

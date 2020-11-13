@@ -1,6 +1,7 @@
 package AST;
 
 import evaluator.Environment;
+import evaluator.Function;
 import parser.StoneException;
 
 import java.util.List;
